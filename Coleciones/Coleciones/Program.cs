@@ -15,9 +15,22 @@ namespace Coleciones
             {
                 numeros.AddFirst(numero);
             }
+            LinkedListNode<int> nodoImportante = new LinkedListNode<int>(15);
 
+            numeros.AddFirst(nodoImportante);
+
+            //numeros.Remove(6);//eliminar un elemento segun su valor
+
+            //leer nodos o listas en oprimera forma izi facil como sea
             foreach (int numero in numeros)
             {
+                Console.WriteLine(numero);
+            }
+
+            //leer numeros o listas en segunda forma
+            for (LinkedListNode<int> nodo=numeros.First; nodo!=null; nodo=nodo.Next)
+            {
+                int numero = nodo.Value;
                 Console.WriteLine(numero);
             }
 
