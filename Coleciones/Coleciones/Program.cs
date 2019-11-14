@@ -8,6 +8,21 @@ namespace Coleciones
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando las listas!");
+
+            LinkedList<int> numeros = new LinkedList<int>();//declarando coleccion tipo linked lista //usando constructor por defecto
+
+            foreach (var numero in new int[] { 10,8,6,4,2,0})
+            {
+                numeros.AddFirst(numero);
+            }
+
+            foreach (int numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+
+
+            /*
             List<int> numeros = new List<int>();//declarando coleccion tipo lista
             int[] listaNumeros = new int[] { 3, 8, 6, 4, 10 };
 
@@ -56,12 +71,14 @@ namespace Coleciones
                 elem1 = Int32.Parse(Console.ReadLine());
                 numeros.Add(elem1);
             }
-
+            numeros.RemoveAt(numeros.Count-1);//elimina un numero en este caso el ultimo introducido
             Console.WriteLine("Elementos introducidos nuevamente: ");
             foreach(int num in numeros)
             {
                 Console.WriteLine("Nuevos elementos totales son: "+num);
             }
+            */
         }
+        
     }
 }
