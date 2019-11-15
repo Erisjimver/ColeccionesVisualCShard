@@ -7,8 +7,58 @@ namespace Coleciones
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Iniciando las listas!");
 
+            Console.WriteLine("Iniciando las listas!");
+            Stack<int> numeros = new Stack<int>();
+            //insertando datos en la cola+
+            foreach (var numero in new int[5] { 2, 4, 6, 8, 10 })
+            {
+                numeros.Push(numero);
+            }
+
+            //recorriendo el stack LIFO
+            Console.WriteLine("Recorriendo el Queue");
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+
+            //eliminando elementos
+            Console.WriteLine("Eliminando Elementos ...");
+            numeros.Pop();
+            Console.WriteLine("Recorriendo el Queue");
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+            /*
+            Queue<int> numeros = new Queue<int>();
+            //insertando datos en la cola+
+            foreach (var numero in new int[5] { 2,4,6,8,10 })
+            {
+                numeros.Enqueue(numero);
+            }
+
+            //recorriendo la cola
+            Console.WriteLine("Recorriendo el Queue");
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+
+            //eliminando elementos
+            Console.WriteLine("Eliminando Elementos ...");
+            numeros.Dequeue();
+            Console.WriteLine("Recorriendo el Queue");
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+            */
+
+
+
+            /*
             LinkedList<int> numeros = new LinkedList<int>();//declarando coleccion tipo linked lista //usando constructor por defecto
 
             foreach (var numero in new int[] { 10,8,6,4,2,0})
@@ -34,6 +84,7 @@ namespace Coleciones
                 Console.WriteLine(numero);
             }
 
+            */
 
             /*
             List<int> numeros = new List<int>();//declarando coleccion tipo lista
