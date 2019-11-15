@@ -9,6 +9,26 @@ namespace Coleciones
         {
 
             Console.WriteLine("Iniciando las listas!");
+            Dictionary<string,int> edades = new Dictionary<string, int>();
+
+            //rellenar el diccionario
+            edades.Add("Israel", 26);
+            edades.Add("Jimena", 19);
+            edades.Add("Ruben", 30);
+            edades.Add("Marlene", 50);
+
+            edades["Juan"] = 20;
+
+            //recorrer el dicionario
+            foreach (KeyValuePair<string,int> persona in edades)
+            {
+                Console.WriteLine("Nombre: "+persona.Key+" edad: "+persona.Value);
+            }
+
+
+
+
+            /*
             Stack<int> numeros = new Stack<int>();
             //insertando datos en la cola+
             foreach (var numero in new int[5] { 2, 4, 6, 8, 10 })
@@ -31,6 +51,10 @@ namespace Coleciones
             {
                 Console.WriteLine(numero);
             }
+
+            */
+
+
             /*
             Queue<int> numeros = new Queue<int>();
             //insertando datos en la cola+
@@ -143,6 +167,6 @@ namespace Coleciones
             }
             */
         }
-        
+
     }
 }
